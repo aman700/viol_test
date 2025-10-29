@@ -179,7 +179,7 @@ if input_mode == "Image":
                     if riders_without_helmet:
                         violations.append(f"🚨 Rider without helmet | Plate: {number_plate}")
                     if len(riders) > 2:
-                        violations.append(f"🚨 Triple seat violation ({len(riders)} riders) | Plate: {number_plate}")
+                        violations.append(f"🚨 Triple seat violation) | Plate: {number_plate}")
                     # if len(riders_without_helmet) > 1:
                     #     violations.append(f"🚨 Multiple riders without helmets ({len(riders_without_helmet)}) | Plate: {number_plate}")
             return violations
@@ -374,7 +374,7 @@ elif input_mode == "Video":
                             violations.append({"type": "Rider without helmet",
                                                "plate": number_plate})
                         if len(riders) > 2:
-                            violations.append({"type": f"Triple seat violation ({len(riders)} riders)",
+                            violations.append({"type": f"Triple seat violation",
                                                "plate": number_plate})
                         # if len(riders_without_helmet) > 1:
                         #     violations.append({"type": f"Multiple riders without helmets ({len(riders_without_helmet)})",
