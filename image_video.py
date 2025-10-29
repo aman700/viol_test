@@ -42,11 +42,12 @@ def extract_text_from_image(image_path):
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": "Extract only the vehicle number plate text (ignore other text).If you cannot read, respond with 'Unable to read'."},
+                        {"type": "text", "text": "Extract only the vehicle number plate text in valid Indian format (e.g., MH12AB1234, MP09C5678, DL1CAB1234). If it does not match, respond with 'Unknown number'. If unreadable, respond with 'Unable to read'."},
                         {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64_img}" }},
                     ],
                 }
-            ],
+            ]
+            ,
             temperature=0,
             max_completion_tokens=512,
         )
